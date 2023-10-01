@@ -1,0 +1,20 @@
+<div class="event-history" *ngFor="let event of eventHistory; let i = index">
+  <div class="event-history-box">
+    <div class="event-history-box-date">
+      <span class="event-history-box-count">{{i + 1}}</span>
+      <div class="event-history-date">
+        {{event.eventTime | date:'dd-MM-yyyy'}}
+      </div>
+    </div>
+    <div class="event-history-content">
+      <div class="event-history-title">
+        <img src="../../../assets/icon-location.png" alt="" class="event-history-location-icon"> {{event.location.name}} - {{event.location.country.name}}
+      </div>
+      <div class="event-history-location">
+        <div class="contact-map">
+          <iframe width="100%" height="125" [src]="event.location.mapLocation | safe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

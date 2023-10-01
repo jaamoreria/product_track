@@ -1,0 +1,54 @@
+<div class="home-page">
+
+    <div class="home-container">
+
+        <!-- Title and Seach input -->
+        <form [formGroup]="searchCodesFormGroup" class="home-form">
+            <div class="w-100">
+                <h2>Track your products</h2>
+            </div>
+            <div class="home-input-search-container">
+                <mat-form-field appearance="outline" class="home-input-search">
+                    <mat-label>Up to 5 codes</mat-label>
+                    <input formControlName="codes" matInput autocomplete="off" maxlength="55">
+                </mat-form-field>
+                <div class="home-button-search-container">
+                    <button mat-flat-button color="primary" class="home-button-search"
+                    (click)="searchCodeAction()">Search Codes</button>
+                </div>
+            </div>
+            <div class="w-100 mt-1">
+                <p>*Example: P9FK0U5V40;LHHR57JEQB;</p>
+            </div>
+        </form>
+
+        <div class="home-loading" *ngIf="loadingCodes">
+            <mat-spinner strokeWidth="5"></mat-spinner>
+        </div>
+
+        <!-- Code Results *ngFor="let a of " -->
+        <ng-container *ngIf="!loadingCodes">
+            <div class="home-result-container" *ngFor="let codeObject of trackCodes">
+                <div class="d-flex flex-row">
+                    <h1 class="home-result-title">{{codeObject.code}}</h1>
+
+                    <h1 *ngIf="codeObject.result?.status === 'VALID'"
+                    class="home-result-status valid">( {{codeObject.result?.status}} )</h1>
+                    <h1 *ngIf="codeObject.result?.status === 'VERIFIED'"
+                    class="home-result-status verified">( {{codeObject.result?.status}} )</h1>
+                    <h1 *ngIf="codeObject.result?.status === 'INVALID'"
+                    class="home-result-status invalid">( {{codeObject.result?.status}} )</h1>
+                </div>
+
+                <ng-container *ngIf="codeObject.result?.status !== 'INVALID'">
+                    <p class="home-result-sub-title"><b>Product Name:</b> {{codeObject.metadata?.data.productName}}</p>
+                    <p class="home-result-sub-title"><b>Market:</b> {{codeObject.metadata?.data.intendedMarket}}</p>
+
+                    <div class="w-100 d-flex justify-content-end">
+                        <button mat-button color="primary" (click)="goToCodeDetails(codeObject)">More Details -></button>
+                    </div>
+                </ng-container>
+            </div>
+        </ng-container>
+    </div>
+</div>

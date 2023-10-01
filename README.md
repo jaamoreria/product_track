@@ -1,5 +1,12 @@
 # KezzlerTask
 
+- First check and change (if needed) the Backend server link in proxy.conf.js on the target property
+- Install the node modules - npm install
+- To run the project use - npm start
+- To run the test use - npm test
+- The UI was done and tested 1920x1080. I tried to adapt but in smaller resolutions it might not work properly 
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
 ## Development server

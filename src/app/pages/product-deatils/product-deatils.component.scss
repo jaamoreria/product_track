@@ -1,0 +1,22 @@
+.product-details {
+
+  .product-details-column {
+    width: 33.33%;
+    padding: 20px;
+    height: auto;
+    float: left;
+  
+    .product-details-title {
+      text-align: center;
+      margin: 0 0 8px;
+    }
+    
+    .product-details-description {
+      text-align: center;
+    }
+  }
+}
+
+.event-history {
+  margin-top: 5rem;
+}

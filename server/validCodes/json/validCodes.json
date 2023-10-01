@@ -1,0 +1,101 @@
+[
+    {
+        "metadata": {
+            "schemaId": 156,
+            "data": {
+                "manufacturingDate": "2020-11-05",
+                "batchID": "BA138",
+                "productName": "Vitamin C",
+                "expiryDate": "2022-11-01",
+                "intendedMarket": "China",
+                "milkCollectionDate": "2020-10-11",
+                "lastQualityDate": "2020-11-10",
+                "customsClearanceCertificateData": "ref53452222"
+            }
+        },
+        "validationCount": 2,
+        "code": "P9FK0U5V40",
+        "result": {
+            "status": "VALID",
+            "errors": []
+        },
+        "recalls": {}
+    },
+    {
+        "metadata": {
+            "schemaId": 156,
+            "data": {
+                "manufacturingDate": "2020-09-27",
+                "batchID": "BA420",
+                "productName": "Vitamin D",
+                "expiryDate": "2022-09-01",
+                "intendedMarket": "India",
+                "milkCollectionDate": "2020-08-03",
+                "lastQualityDate": "2020-10-02",
+                "customsClearanceCertificateData": "ref647928653"
+            }
+        },
+        "validationCount": 4,
+        "code": "LHHR57JEQB",
+        "result": {
+            "status": "VALID",
+            "errors": []
+        },
+        "recalls": {}
+    },
+    {
+        "metadata": {
+            "schemaId": 156,
+            "data": {
+                "manufacturingDate": "2020-11-05",
+                "batchID": "BA138",
+                "productName": "Vitamin C",
+                "expiryDate": "2022-11-01",
+                "intendedMarket": "China",
+                "milkCollectionDate": "2020-10-11",
+                "lastQualityDate": "2020-11-10",
+                "customsClearanceCertificateData": "ref53452222"
+            }
+        },
+        "validationCount": 7,
+        "code": "5UFXCIPPC2",
+        "result": {
+            "status": "VALID",
+            "errors": []
+        },
+        "recalls": {}
+    },
+    {
+        "metadata": {
+            "schemaId": 156,
+            "data": {
+                "manufacturingDate": "2020-07-11",
+                "batchID": "BA664",
+                "productName": "Vitamin K",
+                "expiryDate": "2022-07-01",
+                "intendedMarket": "Malaysia",
+                "milkCollectionDate": "2020-06-21",
+                "lastQualityDate": "2020-07-18",
+                "customsClearanceCertificateData": "ref373657666"
+            }
+        },
+        "codeFlags": [
+            {
+                "id": 4,
+                "name": "Rejected by inspection"
+            }
+        ],
+        "validationCount": 0,
+        "code": "OU86HZQZL2",
+        "result": {
+            "status": "VERIFIED",
+            "errors": [
+                {
+                    "code": 108,
+                    "message": "Code OU86HZQZL2 has status 'Rejected by inspection'"
+                }
+            ]
+        },
+        "recalls": {}
+    }
+]

@@ -1,0 +1,79 @@
+<div class="product-details">
+  <mat-toolbar color="primary">
+    <span>Product Details ( {{codeDetails.code}} )</span>
+  </mat-toolbar>
+  
+  <mat-card>
+    <div class="row">
+      <div class="product-details-column">
+        <h2 class="product-details-title">Product Name</h2>
+        <p class="product-details-description">{{codeDetails.metadata?.data?.productName}}</p>
+      </div>
+      <div class="product-details-column">
+        <h2 class="product-details-title">Market</h2>
+        <p class="product-details-description">{{codeDetails.metadata?.data?.intendedMarket}}</p>
+      </div>
+      <div class="product-details-column">
+        <h2 class="product-details-title">Batch ID</h2>
+        <p class="product-details-description">{{codeDetails.metadata?.data?.batchID}}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="product-details-column">
+        <h2 class="product-details-title">Package Name</h2>
+        <p class="product-details-description">{{productDetails.self?.packageType?.name}}</p>
+      </div>
+      <div class="product-details-column">
+        <h2 class="product-details-title">Package Type</h2>
+        <p class="product-details-description">{{productDetails.self?.packageType?.type}}</p>
+      </div>
+      <div class="product-details-column">
+        <h2 class="product-details-title">Package Material</h2>
+        <p class="product-details-description">{{productDetails.self?.packageType?.material}}</p>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="product-details-column">
+        <h2 class="product-details-title">Customs Ref</h2>
+        <p class="product-details-description">{{codeDetails.metadata?.data?.customsClearanceCertificateData}}</p>
+      </div>
+      <div class="product-details-column">
+        <h2 class="product-details-title">Expiry Date</h2>
+        <p class="product-details-description">{{codeDetails.metadata?.data?.expiryDate}}</p>
+      </div>
+      <div class="product-details-column">
+        <h2 class="product-details-title">Manufacturing Date</h2>
+        <p class="product-details-description">{{codeDetails.metadata?.data?.manufacturingDate}}</p>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="product-details-column">
+        <h2 class="product-details-title">LastQuality Date</h2>
+        <p class="product-details-description">{{codeDetails.metadata?.data?.lastQualityDate}}</p>
+      </div>
+      <div class="product-details-column">
+        <h2 class="product-details-title">Collection Date</h2>
+        <p class="product-details-description">{{codeDetails.metadata?.data?.milkCollectionDate}}</p>
+      </div>
+      <div class="product-details-column">
+        <h2 class="product-details-title">Validation Count</h2>
+        <p class="product-details-description">{{codeDetails.validationCount}}</p>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<div class="event-history">
+  <mat-toolbar color="primary">
+    <span>Event History</span>
+  </mat-toolbar>
+  
+  <mat-card>
+    <app-event-history [eventHistory]="productDetails.events?.event"></app-event-history>
+  </mat-card>
+</div>
+
+
